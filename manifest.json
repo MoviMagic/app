@@ -6,7 +6,7 @@
     "background_color": "#000000",
     "theme_color": "#000000",
     "description": "Entretenimiento en familia.",
-    "orientation": "any",
+    "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
