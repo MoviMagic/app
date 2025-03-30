@@ -92711,8 +92711,7 @@ A.a3d.prototype={
 $2(a,b){var s,r,q,p,o,n="[DEFAULT]"
 if(b.a!==B.fZ)return B.l3
 s=b.b
-r=s==null
-if(r||r)return B.N1
+if(s==null)return B.N1
 r=$.az
 q=(r==null?$.az=$.bL():r).bQ(n)
 r=$.cd()
