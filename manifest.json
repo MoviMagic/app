@@ -1,12 +1,12 @@
 {
-    "name": "MoviMagic",
-    "short_name": "MoviMagic",
+    "name": "movimagic",
+    "short_name": "movimagic",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#000000",
     "description": "Entretenimiento en familia.",
-    "orientation": "portrait-primary",
+    "orientation": "landscapte-primary",
     "prefer_related_applications": false,
     "icons": [
         {
