@@ -1,52 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoviMagic</title>
-
-  <!-- Manifest para configuración de PWA -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- Íconos -->
-  <link rel="icon" type="image/png" href="icons/Icon-192.png">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Soporte para aplicaciones standalone (PWA) -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#000000">
-
-  <!-- Firebase Compat SDK -->
+  <!-- Agrega los scripts de Firebase Compatibles -->
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics-compat.js"></script>
 </head>
-
 <body>
-  <script>
-    // Configuración de Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyDhPRVu8n_pZQzJPVWNFlJonmj5KEYsF10",
-      authDomain: "movimagic.firebaseapp.com",
-      projectId: "movimagic",
-      storageBucket: "movimagic.appspot.com",
-      messagingSenderId: "518388279864",
-      appId: "1:518388279864:web:a6f699391ec5bb627c14cd",
-      measurementId: "G-GG65HJV2T6"
-    };
+<script>
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyDhPRVu8n_pZQzJPVWNFlJonmj5KEYsF10",
+    authDomain: "movimagic.firebaseapp.com",
+    projectId: "movimagic",
+    storageBucket: "movimagic.appspot.com",
+    messagingSenderId: "518388279864",
+    appId: "1:518388279864:web:a6f699391ec5bb627c14cd",
+    measurementId: "G-GG65HJV2T6"
+  };
 
-    // Inicializar Firebase
-    firebase.initializeApp(firebaseConfig);
-    if ('measurementId' in firebaseConfig) {
-      firebase.analytics();
-    }
-  </script>
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
+  if ('measurementId' in firebaseConfig) {
+    firebase.analytics();
+  }
+</script>
 
-  <!-- Script principal generado por Flutter -->
-  <script src="main.dart.js" defer></script>
+<!-- Script principal de Flutter -->
+<script src="main.dart.js" defer></script>
 </body>
 </html>
