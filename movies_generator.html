@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Películas - Dashboard</title>
+  <link rel="stylesheet" href="styles_movies.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <h1>Generador de Películas</h1>
+    </header>
+    <main class="content">
+      <section class="form-section">
+        <h2>Formulario de Película</h2>
+        <form id="movie-form">
+          <label for="entryType">Tipo de ingreso:</label>
+          <select id="entryType">
+            <option value="tmdb">Desde TMDB</option>
+            <option value="manual">Agregar Manualmente</option>
+          </select>
+          
+          <div id="tmdb-fields">
+            <input type="text" id="documentId" placeholder="ID de Documento" required>
+            <input type="text" id="title" placeholder="Título de la Película" required>
+            <input type="text" id="tmdbId" placeholder="ID de TMDB" required>
+            <input type="text" id="videoUrl" placeholder="URL del Video" required>
+            <label for="categories">Categorías:</label>
+            <select id="categories" multiple required>
+              <option value="Películas">Películas</option>
+              <option value="Infantil">Infantil</option>
+              <option value="Netflix">Netflix</option>
+              <option value="Prime Video">Prime Video</option>
+              <option value="Disney+">Disney+</option>
+              <option value="Max">Max</option>
+              <option value="Paramount+">Paramount+</option>
+              <option value="Vix">Vix</option>
+              <option value="Crunchyroll">Crunchyroll</option>
+			  <option value="MovistarTV">MovistarTV</option>
+			  <option value="Universal+">Universal+</option>
+              <option value="tv+">tv+</option>
+              <option value="hulu">hulu</option>
+              <option value="Animes">Animes</option>
+              <option value="Humor">Humor</option>
+              <option value="Conciertos">Conciertos</option>
+              <option value="Videoteca">Videoteca</option>
+            </select>
+            <label for="addedDate">Fecha de Adición:</label>
+            <input type="date" id="addedDate" required>
+          </div>
+          
+          <!-- Parte Manual -->
+<div id="manual-fields" style="display: none;">
+  <input type="text" id="documentId" placeholder="ID de Documento" required>
+  <input type="text" id="manualTitle" placeholder="Título de la Película" required>
+  <input type="text" id="year" placeholder="Año" required>
+  <input type="text" id="rating" placeholder="Calificación" required>
+  <textarea id="description" placeholder="Descripción o Sinopsis" required></textarea>
+  <label for="genres">Géneros:</label>
+  <input type="text" id="genres" placeholder="Acción, Drama, Comedia" required>
+  <label for="posterUrl">URL de Póster:</label>
+  <input type="text" id="posterUrl" placeholder="URL de la imagen de portada" required>
+  <label for="backgroundUrl">URL de Fondo:</label>
+  <input type="text" id="backgroundUrl" placeholder="URL de la imagen de fondo" required>
+  <label for="videoUrl">URL del Video:</label>
+  <input type="text" id="videoUrl" placeholder="URL del Video" required>
+</div>
+          
+          <button type="submit">Agregar Película</button>
+        </form>
+      </section>
+
+      <section class="actions-section">
+        <h2>Acciones</h2>
+        <button type="button" id="verify-movie-btn">Verificar Película</button>
+        <button type="button" id="refresh-page-btn">Actualizar Página</button>
+        <button type="button" id="delete-movie-btn">Eliminar Película</button>
+        <p id="message"></p>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="script_movies.js"></script>
+  <script>
+    document.getElementById('entryType').addEventListener('change', function() {
+      const tmdbFields = document.getElementById('tmdb-fields');
+      const manualFields = document.getElementById('manual-fields');
+      
+      if (this.value === 'tmdb') {
+        tmdbFields.style.display = 'block';
+        manualFields.style.display = 'none';
+      } else {
+        tmdbFields.style.display = 'none';
+        manualFields.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
